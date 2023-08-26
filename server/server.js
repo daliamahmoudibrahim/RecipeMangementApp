@@ -4,10 +4,10 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const mysql = require('mysql')
  const connection = mysql.createConnection({
-   host: '0.0.0.0',
+   host: '127.0.0.1',
    user: 'root',
    password: 'mysql_123456',
-   database:'Recipes'
+   database: 'Recipes',
  })
 
 app.use(cors())
@@ -68,7 +68,7 @@ app.get('/search', (req,res)=>{
   })
 })
 
-app.listen(8000 || process.env.PORT,'0.0.0.0',()=>{
+app.listen(8000 || process.env.PORT,'127.0.0.1',()=>{
     console.log('app listen in port 8000');
 })
 
